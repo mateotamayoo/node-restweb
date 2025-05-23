@@ -3,4 +3,5 @@ node_modules/
 keys/
 prisma/
 mongo/
-postgres/
+/postgres
+dist/
