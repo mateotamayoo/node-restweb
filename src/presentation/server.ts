@@ -30,6 +30,7 @@ export class Server {
 
         this.app.use(express.json());
         this.app.use(express.urlencoded({extended: true})); //x-www-urlencoded
+        this.app.use(compression())
 
         //* Routes
         this.app.use(this.routes)
@@ -48,4 +49,8 @@ export class Server {
             console.log('server running on port 3001');
         })
     }
+}
+
+function compression(): any {
+    throw new Error('Function not implemented.');
 }

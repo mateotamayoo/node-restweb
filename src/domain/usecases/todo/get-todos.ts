@@ -6,16 +6,16 @@ import { TodoRepository } from "../../repositories/todo.repository";
 
 
 export interface GetTodosUseCase {
-    execute(id: number): Promise<TodoEntity[]>
+    execute(): Promise<TodoEntity[]>
 }
 
-export class GetTodo implements GetTodosUseCase {
+export class GetTodos implements GetTodosUseCase {
 
     constructor(
         private readonly repository:TodoRepository,
     ) {}
 
-    execute(id:number): Promise<TodoEntity[]> {
+    execute(): Promise<TodoEntity[]> {
         return this.repository.getAll();
     }
 
